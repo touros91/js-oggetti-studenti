@@ -64,15 +64,34 @@ for (var i = 0; i < studenti.length; i++) {
 
 // Dare la possibilità all’utente, attraverso 3 prompt(), di aggiungere un nuovo oggetto studente inserendo nell’ordine: nome, cognome e età.
 
+var nuovoNome = prompt("Inserisci il tuo nome");
+
+while (!isNaN(nuovoNome)) {
+    alert("Errore!");
+    nuovoNome = prompt("Inserisci il tuo nome");
+}
+
+var nuovoCognome = prompt("Inserisci il tuo cognome");
+
+while (!isNaN(nuovoCognome)) {
+    alert("Errore!");
+    nuovoCognome = prompt("Inserisci il tuo cognome");
+}
+
+var nuovaEta = parseInt(prompt("Inserisci la tua età"));
+
+while (isNaN(nuovaEta) || nuovaEta < 18 || nuovaEta > 60) {
+    alert("Errore! Devi inserire il numero dei tuoi anni. Ricorda che puoi iscriverti solo se hai un'età compresa tra 18 e 60.");
+    nuovaEta = parseInt(prompt("Inserisci la tua età"));
+}
+
 var nuovoStudente = {
-    "nome" : prompt("Inserisci il tuo nome"),
-    "cognome" : prompt("Inserisci il tuo cognome"),
-    "eta" : parseInt(prompt("Inserisci la tua età"))
+    "nome" : nuovoNome,
+    "cognome" : nuovoCognome,
+    "eta" : nuovaEta
 }
 
 studenti.push(nuovoStudente);
-
-console.log(studenti);
 
 // PARTE EXTRA 
 // mostro nella pagina html l'elenco di tutti gli studenti (nome e cognome) compreso quello inserito dall'utente 
