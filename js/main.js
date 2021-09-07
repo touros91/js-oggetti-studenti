@@ -75,6 +75,8 @@ studenti.push(nuovoStudente);
 console.log(studenti);
 
 // PARTE EXTRA 
+// mostro nella pagina html l'elenco di tutti gli studenti (nome e cognome) compreso quello inserito dall'utente 
+
 for (var i = 0; i < studenti.length; i++) {
     document.getElementById("iscritti").innerHTML += `<br> ${studenti[i]["nome"]} ${studenti[i]["cognome"]} <br>`;
 }
