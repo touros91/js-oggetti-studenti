@@ -12,7 +12,7 @@ var studente = {
     "nome" : "Andrea",
     "cognome" : "Geraci",
     "eta" : 30
-}
+};
 
 // 1.b. Stampare a schermo attraverso un ciclo for-in tutte le proprietà dell'oggetto.
 
@@ -89,7 +89,7 @@ var nuovoStudente = {
     "nome" : nuovoNome,
     "cognome" : nuovoCognome,
     "eta" : nuovaEta
-}
+};
 
 studenti.push(nuovoStudente);
 
